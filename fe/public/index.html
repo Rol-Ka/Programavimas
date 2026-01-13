@@ -4,10 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produktu CRUDAS</title>
+    <title>Product CRUD</title>
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
 </head>
+
+<!-- 
+    Prekės pavadinimas;
+    Kaina;
+    Kiekis sandėlyje;
+    Trumpas aprašymas;
+-->
 
 <body>
 
@@ -21,7 +28,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Create Product</h5>
                         <p class="card-text">Here you can add a new product to the inventory.</p>
-                        <form data-create-form>
+                        <div data-create-form>
                             <div class="mb-3">
                                 <label for="productName" class="form-label">Product Name</label>
                                 <input type="text" class="form-control" id="productName" name="productName"">
@@ -42,8 +49,7 @@
                                     rows="3"></textarea>
                             </div>
                             <button data-create-btn type="button" class="btn btn-primary">Add Product</button>
-                        </form>
-
+                        </div>
                     </div>
                 </div>
             </div>
@@ -54,6 +60,5 @@
     </div>
 
 </body>
-
 
 </html>

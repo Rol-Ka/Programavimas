@@ -7224,34 +7224,41 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /*
-
-Prekes pavadinimas;
-Kaina;
-Kiekis sandelyje:
-Trumpas aprasymas;
---nuotrauka
+    Prekės pavadinimas;
+    Kaina;
+    Kiekis sandėlyje;
+    Trumpas aprašymas;
+    ---Nuotrauka.
 */
 
-var serverUrl = 'http://localhost:80/item';
+var serverUrl = 'http://localhost/items';
 var initApp = function initApp(_) {
   console.log('App started');
   initCreateForm();
 };
 var initCreateForm = function initCreateForm(_) {
+  // Randam formą ir mygtuką
   var form = document.querySelector('[data-create-form]');
   var createBtn = form.querySelector('[data-create-btn]');
-  createBtn.addEventListener('click', function (_) {
+
+  // Pridedam mygtuko paspaudimo eventą
+  createBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    // Surandam visus inputus su name atributu
     var allInputs = form.querySelectorAll('[name]');
+    // Sukuriam tuščią objektą prekės duomenims laikyti
     var itemData = {};
+
+    // Einam per visus inputus ir įdedam jų reikšmes į objektą
     allInputs.forEach(function (input) {
-      var name = input.getAttribute('name');
-      var value = input.value;
-      itemData[name] = value;
+      var name = input.getAttribute('name'); // pavadinimas, kaina, kiekis, aprasymas
+      var value = input.value; // input reikšmė
+      itemData[name] = value; // itemData['pavadinimas'] = 'Tokia tai prekė'
     });
     axios__WEBPACK_IMPORTED_MODULE_0__["default"].post(serverUrl, itemData).then(function (res) {
       console.log('Prekė sukurta sėkmingai:', res.data);
       // Išvalom formą
-      form.reset();
+      // form.reset();
     })["catch"](function (err) {
       console.error('Klaida kuriant prekę:', err);
     });
