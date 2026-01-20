@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Galerija su Slideriu</title>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="gallery" id="gallery"></div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+
+            <span class="close" id="close">&times;</span>
+
+            <div class="text-bar">
+                <span id="slideText"></span>
+            </div>
+
+            <div class="slider">
+                <img id="slideImage">
+                <button class="img-arrow left" id="prev">&#10094;</button>
+                <button class="img-arrow right" id="next">&#10095;</button>
+                <button class="pause" id="pause">II</button>
+            </div>
+
+            <div class="thumbs-wrapper">
+                <div class="thumbs" id="thumbs"></div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

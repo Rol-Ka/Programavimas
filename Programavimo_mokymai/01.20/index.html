@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="lt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Slideris</title>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <h2 class="title">Mano galerija</h2>
+
+        <!-- TEXT SLIDER -->
+        <div class="text-bar">
+            <button class="arrow" id="textPrev"></button>
+            <span id="slideText">{nuotraukos tekstas}</span>
+            <button class="arrow" id="textNext"></button>
+        </div>
+
+        <!-- IMAGE SLIDER -->
+        <div class="slider">
+            <img id="slideImage" src="" alt="">
+
+            <button class="img-arrow left" id="prev">&#10094;</button>
+            <button class="img-arrow right" id="next">&#10095;</button>
+
+            <button class="pause" id="pause">II</button>
+        </div>
+
+        <!-- THUMBNAILS -->
+        <div class="thumbs-wrapper">
+            <div class="thumbs" id="thumbs"></div>
+        </div>
+
+    </div>
+</body>
+
+</html>

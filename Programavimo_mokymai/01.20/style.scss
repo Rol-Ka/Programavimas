@@ -1,0 +1,139 @@
+ * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+     font-family: Arial, sans-serif;
+ }
+
+ body {
+     background: #ccc;
+     display: flex;
+     justify-content: center;
+     font-family: Arial, sans-serif;
+ }
+
+ .container {
+     background: #fff;
+     max-width: 1024px;
+     min-width: 480px;
+     width: 100%;
+     padding: 20px;
+     text-align: center;
+ }
+
+ .title {
+     text-align: left;
+     margin-bottom: 10px;
+ }
+
+ /* RED TEXT BAR */
+ .text-bar {
+     background: grey;
+     color: #fff;
+     padding: 15px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     font-size: 18px;
+ }
+
+ .text-bar .arrow {
+     background: none;
+     border: none;
+     color: #fff;
+     font-size: 24px;
+     cursor: pointer;
+ }
+
+ /* IMAGE */
+ .slider {
+     position: relative;
+     margin: 20px auto;
+     width: 70%;
+     aspect-ratio: 4 / 3;
+     background: white;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .slider img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+
+ /* IMAGE ARROWS */
+ .img-arrow {
+     position: absolute;
+     bottom: 10px;
+     background: grey;
+     color: white;
+     border: none;
+     width: 35px;
+     height: 35px;
+     border-radius: 50%;
+     cursor: pointer;
+ }
+
+ .img-arrow.left {
+     left: 10px;
+ }
+
+ .img-arrow.right {
+     right: 10px;
+ }
+
+ /* PAUSE */
+ .pause {
+     position: absolute;
+     bottom: -20px;
+     background: grey;
+     color: white;
+     width: 60px;
+     height: 60px;
+     border-radius: 50%;
+     border: none;
+     font-size: 22px;
+     font-weight: bold;
+     cursor: pointer;
+ }
+
+ /* THUMBNAILS */
+ .thumbs-wrapper {
+     overflow-x: auto;
+     max-width: 360px;
+     /* telpa ~6 mygtukai */
+     margin: 40px auto 0;
+ }
+
+ .thumbs {
+     display: flex;
+     gap: 10px;
+     width: max-content;
+     /* leidžia plėstis */
+ }
+
+ .thumb {
+     min-width: 50px;
+     height: 50px;
+     background: grey;
+     color: white;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+     border-radius: 8px;
+     opacity: 0.6;
+     user-select: none;
+ }
+
+ .thumb.active {
+     opacity: 1;
+ }
+
+ @media (max-width: 600px) {
+     .slider {
+         height: 280px;
+     }
+ }
